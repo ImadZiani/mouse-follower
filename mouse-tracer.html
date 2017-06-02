@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mouse-tracer.css">
+</head>	
+<body >
+
+<div class="screen" id="screen">
+																				
+<div class="demo" id="demo"></div>
+</div>
+<script>
+document.getElementById("screen").addEventListener("mousemove", showCoords);
+
+
+function showCoords(event) {
+    var x = event.clientX;
+    var y = event.clientY;
+
+    //console.log(x);
+    document.getElementById("demo").style.top = y-10 + "px";
+    document.getElementById("demo").style.left = x-10 + "px";
+
+    //document.getElementById("screen").style.transform = "";
+
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    //document.getElementById("demo").innerHTML = coords;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
